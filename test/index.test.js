@@ -1,7 +1,7 @@
 const createElement = require('../dist/index.min');
 
 test(`创建元素`, () => {
-    const div = createElement({
+    const elementNode = createElement({
         elementName: 'div',
         style: {width: '100px', height: '100px'},
         customAttribute: {hello: 'world'},
@@ -10,6 +10,6 @@ test(`创建元素`, () => {
             innerHTML: '我是被创建的元素',
         },
     });
-    console.log(div.outerHTML);
+    console.log(elementNode.outerHTML);
     expect(true).toEqual(true);
 });
